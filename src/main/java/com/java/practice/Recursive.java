@@ -67,5 +67,5 @@ public class Recursive {
 		}
 		
 		return result;
-	} 
+	}
 }
