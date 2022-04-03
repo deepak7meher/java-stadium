@@ -12,6 +12,9 @@ public class Recursive {
 		
 		int result3 = factorial(5);
 		System.out.println(result3);
+		
+		int result4 = multiply(3,6);
+		System.out.println(result4);
 
 	}
 	
@@ -52,4 +55,17 @@ public class Recursive {
 		}
 		return result;
 	}
+	
+	//user recursive to multiply numbers from n1 to n2(ex: 3 to 6 = 3*4*5*6)
+	public static int multiply(int n1, int n2) {
+		
+		int result = 0;
+		if (n2 > n1) {
+			result = n2 * multiply(n1, n2-1);
+		} else {
+			result = n2;
+		}
+		
+		return result;
+	} 
 }
