@@ -5,18 +5,18 @@
 	<groupId>java-stadium</groupId>
 	<artifactId>java-stadium</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-
-	<build>
 	
+	
+	<build>
+
 		<defaultGoal>package</defaultGoal>
+		<directory>output</directory>
+		<outputDirectory>output/classes</outputDirectory>
+		<finalName>${project.artifactId}-${project.version}</finalName>
+		<testOutputDirectory>output/test-classes</testOutputDirectory>
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<testSourceDirectory>test</testSourceDirectory>
 
-        <directory>output</directory>
-        <outputDirectory>output/classes</outputDirectory>
-
-        <finalName>${project.artifactId}-${project.version}</finalName>
-        <testOutputDirectory>output/test-classes</testOutputDirectory>
-        <sourceDirectory>src/main/java</sourceDirectory>
-        <testSourceDirectory>test</testSourceDirectory>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
