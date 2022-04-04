@@ -7,6 +7,14 @@
 	<version>0.0.1-SNAPSHOT</version>
 	
 	
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-collections4</artifactId>
+			<version>4.4</version>
+		</dependency>
+	</dependencies>
+	
 	<build>
 
 		<defaultGoal>package</defaultGoal>
@@ -28,6 +36,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		
 	</build>
 
 	<properties>
