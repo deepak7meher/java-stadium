@@ -1,5 +1,7 @@
 package com.java.practice;
 
+//Find out total number of ways you can make the change of the given amount using the coins given.
+//Condition -> Infinite supply of coins
 public class CoinChangeProblem {
 
 	public static void main(String[] args) {
