@@ -9,8 +9,10 @@ public class ValidParantheses {
 	public static void main(String[] args) {
 
 		
-		String s = "[((){}[()])]";
+		//String s = "[((){}[()])]";
 		//String s = "()(){}[]()";
+		//String s = "([)]";
+		String s = "(){}}{";
 		boolean valid = isValid(s);
 		System.out.println(valid);
 	}
@@ -27,16 +29,17 @@ public class ValidParantheses {
 		map.put('(', ')');
 		map.put('{', '}');
 		map.put('[', ']');
-		
-		//System.out.println(map.get('('));
-		
+				
 		for (int i=0; i<cArr.length; i++) {
-			System.out.println("----------------------");
-			System.out.println(i);
-			//System.out.println(cArr[i] +"  "+ map.get(cArr[i]));
+
 			if(i > 0) {
 				if(map.get(cArr[i]) == null) {
-					if(map.get(stack.peek()) == cArr[i]) {
+					char c = ' ';
+					if(!stack.isEmpty() && map.get(stack.peek()) != null) {
+						c = map.get(stack.peek()).charValue();
+					} 
+					
+					if(!stack.isEmpty() && cArr[i] == c) {
 						stack.pop();
 					} else {
 						stack.push(cArr[i]);
@@ -47,13 +50,11 @@ public class ValidParantheses {
 			} else {
 				stack.push(cArr[i]);
 			}
-			System.out.println("Current stack: "+stack);
 		}
 		
 		if(stack.isEmpty()) {
 			valid = true;
 		}
-		System.out.println(stack);
 		
 		return valid;
     }
