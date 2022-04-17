@@ -28,7 +28,7 @@ public class RemoveElement {
 
 		}
 		System.out.println("------------------");
-		for(int i=0; i<nums.length-k; i++) {
+		for(int i=0; i<k; i++) {
 			System.out.println(nums[i]);
 		}
 		
