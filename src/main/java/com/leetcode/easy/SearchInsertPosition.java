@@ -27,11 +27,6 @@ public class SearchInsertPosition {
 				r=mid-1;
 			}
 		}
-		/*System.out.println(l);
-		System.out.println(r);
-		if(r-l ==1 && target!=nums[l] && target!=nums[r]) {
-			return r;
-		}*/
 		return l;
     }
 
