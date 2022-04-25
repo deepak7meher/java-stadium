@@ -10,29 +10,25 @@ public class MoveZeroes {
 		//0,1,0,3,4,6 -- 1,3,4,6,0,0
 		
 		moveZeroes(nums);
-//		for(int i: nums) {
-//			System.out.println(i);
-//		}
+		for(int i: nums) {
+			System.out.println(i);
+		}
 	}
 	
 	public static void moveZeroes(int[] nums) {
         
 		int count = 0;
 		
-		for(int i=0; i < nums.length-count; i++) {
+		for(int i=0; i < nums.length; i++) {
 			System.out.println("nums[i]="+nums[i]);
-			if(nums[i] == 0) {
+			if(nums[i] != 0) {
+				nums[count] = nums[i];
 				count++;
-				for(int j=i; j<nums.length-count; j++) {
-					nums[j] = nums[j+1];
-				}
-				nums[nums.length-count] = 0;
+				System.out.println("nums[count]="+nums[count]);
 			}
-			System.out.println("-----------");
-			for(int k: nums) {
-				System.out.println(k);
-			}
-			System.out.println("-----------");
+		}
+		for(; count < nums.length; count++) {
+			nums[count] = 0;
 		}
     }
 
