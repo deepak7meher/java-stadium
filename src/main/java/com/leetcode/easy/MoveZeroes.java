@@ -23,8 +23,8 @@ public class MoveZeroes {
 			System.out.println("nums[i]="+nums[i]);
 			if(nums[i] != 0) {
 				nums[count] = nums[i];
-				count++;
 				System.out.println("nums[count]="+nums[count]);
+				count++;
 			}
 		}
 		for(; count < nums.length; count++) {
