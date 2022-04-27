@@ -6,10 +6,12 @@ public class RemoveDuplicates {
 		
 		int[] nums = {4,5,6,4,6,6,7}; //-- 4,5,6,7
 		System.out.println(removeDuplicates(nums));
-
+		for (int l : nums) {
+			System.out.println(l);
+		}
 	}
 	
-	public static int removeDuplicates(int[] nums) {
+	public static int removeDuplicates1(int[] nums) {
         
 		int k = 0;
 		int flag = 0;
@@ -38,5 +40,6 @@ public class RemoveDuplicates {
 		}
 		return k+1;
     }
+
 
 }
