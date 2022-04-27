@@ -11,7 +11,7 @@ public class RemoveDuplicates {
 		}
 	}
 	
-	public static int removeDuplicates1(int[] nums) {
+	public static int removeDuplicates(int[] nums) {
         
 		int k = 0;
 		int flag = 0;
