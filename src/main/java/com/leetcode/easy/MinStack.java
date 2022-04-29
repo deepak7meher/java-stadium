@@ -1,44 +1,57 @@
 package com.leetcode.easy;
 
+import java.util.ArrayList;
+import java.util.List;
+
 //https://leetcode.com/problems/min-stack/
 public class MinStack {
-	
-	int[] arr;
 
+	List<Integer> list;
 	public static void main(String[] args) {
 
 		MinStack minStack = new MinStack();
 		
 		minStack.push(3);
+		minStack.push(15);
+		minStack.push(9);
+		minStack.push(2);
+		minStack.push(22);
+		System.out.println(minStack.top());
 		minStack.pop();
-		minStack.top();
-		minStack.getMin();
+		System.out.println(minStack.top());
+		System.out.println(minStack.getMin());
 	}
 
 	
 	public MinStack() {
 		
-		arr = new int[arr.length];
+		list = new ArrayList<Integer>();
         
     }
     
     public void push(int val) {
         
-    	
+    	list.add(val);
     }
     
     public void pop() {
         
+    	list.remove(list.size()-1);
     }
     
     public int top() {
     	
-    	return 0;
-        
+    	return list.get(list.size()-1);
     }
     
     public int getMin() {
     	
-    	return 0;
+    	int min = list.get(0);
+    	for(int i=0; i<list.size(); i++) {
+    		if(list.get(i) < min) {
+    			min = list.get(i);
+    		}
+    	}
+    	return min;
     }
 }
