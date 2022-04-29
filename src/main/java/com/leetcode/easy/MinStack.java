@@ -2,6 +2,8 @@ package com.leetcode.easy;
 
 //https://leetcode.com/problems/min-stack/
 public class MinStack {
+	
+	int[] arr;
 
 	public static void main(String[] args) {
 
@@ -15,11 +17,14 @@ public class MinStack {
 
 	
 	public MinStack() {
+		
+		arr = new int[arr.length];
         
     }
     
     public void push(int val) {
         
+    	
     }
     
     public void pop() {
