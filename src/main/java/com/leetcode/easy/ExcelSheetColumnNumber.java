@@ -17,6 +17,7 @@ public class ExcelSheetColumnNumber {
             System.out.println(tempValue);
             result = result + (int)Math.pow(26,i)*tempValue;
         }
+        
         return result;
     }
 }
