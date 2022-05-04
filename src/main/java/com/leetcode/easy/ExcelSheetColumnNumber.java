@@ -4,7 +4,7 @@ public class ExcelSheetColumnNumber {
 
 	public static void main(String[] args) {
 
-		int colNum = titleToNumber("AB");
+		int colNum = titleToNumber("BB");
 		System.out.println(colNum);
 	}
 
@@ -16,6 +16,7 @@ public class ExcelSheetColumnNumber {
             int tempValue = (columnTitle.charAt(l-i-1) - 'A') +1;
             System.out.println(tempValue);
             result = result + (int)Math.pow(26,i)*tempValue;
+            System.out.println(result);
         }
         
         return result;
