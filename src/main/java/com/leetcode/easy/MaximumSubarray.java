@@ -11,22 +11,20 @@ public class MaximumSubarray {
 	}
 	
 	public static int maxSubArray(int[] nums) {
-		int current_sum = 0;
-		int max_sum = -99999;
+		int current = 0;
+		int max = -99999;
 		for (int i = 0; i < nums.length; i++) {
-			if (current_sum >= 0) {
-				current_sum += nums[i];
+			if (current >= 0) {
+				current += nums[i];
 			} else {
-				current_sum = nums[i];
+				current = nums[i];
 			}
-			System.out.println("current_sum="+current_sum);
-			if (current_sum > max_sum) {
-				max_sum = current_sum;
+			System.out.println("current="+current);
+			if (current > max) {
+				max = current;
 			}
-			System.out.println("max_sum="+max_sum);
+			System.out.println("max="+max);
 		}
-		return max_sum;
+		return max;
 	}
-   
-
 }
